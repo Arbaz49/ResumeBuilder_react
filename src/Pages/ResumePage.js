@@ -48,7 +48,7 @@ const ResumePage = () => {
             <button className='rbuttons' style={{backgroundColor:"red",color:"white"}} onClick={handleclick}>Preview</button>
         </div>
         <div className="inputcontainer">
-            {personal?<PersonalDetails remove={personal}/>:''}
+            {personal?<PersonalDetails/>:''}
             {about?<AboutComponent/>:''}
             {education?<Education/>:''}
             {work?<WorkExpC/>:''}
