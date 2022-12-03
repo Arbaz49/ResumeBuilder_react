@@ -1,0 +1,109 @@
+
+
+.resumenavcontainer{
+    margin-top: 50px;
+    height: 85vh;
+}
+.btncontainer{
+  width: 70%;
+  margin: auto;
+display: flex;
+justify-content: space-between;
+padding: 5px;
+}
+.rbuttons{
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: aqua;
+    font-weight: bolder;
+}
+.inputcontainer{
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+}
+.aboutcontainer{
+    margin-top: 30px;
+}
+.resumeContainer{
+    width: 100%;
+    padding-top: 20px;
+    margin: auto;
+    background-color:white;
+}
+.toppart{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.resumeleft{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+justify-content: space-between;
+
+}
+.resumeleft > h1{
+    line-height: normal;
+
+    font-size: 30px;
+    text-align: left;
+    color: orange;
+    margin-left: 0px;
+}
+.resumeright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 10px;
+    color: orange;
+    margin-right: 20px;
+    width: 20%;
+
+}
+.description{
+    margin-top: 10px;
+    background-color: orange;
+    padding: 10px;
+    line-height: normal;
+}
+.description >p{
+    color: white;
+}
+.resumepage{
+    background-color: aliceblue;
+    
+}
+.infoContainer{
+    line-height: normal;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+
+}
+.leftinfo{
+    width: 70%;
+}
+.rightinfo{
+    width: 49%;
+}
+.resumeContainer{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.intersest-language{
+    display: flex;
+    justify-content: space-between;
+
+}
+.interest{
+    width: 49%;
+
+}
+.language{
+    width: 49%;
+}
