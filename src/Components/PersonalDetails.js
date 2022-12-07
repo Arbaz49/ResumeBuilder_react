@@ -42,42 +42,42 @@ const PersonalDetails = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
       
   <div className="mb-3">
-    <label for="exampleInputEmail1" className="form-label">Name : </label>
+    <label  className="form-label">Name : </label>
     <input type="text" className="form-control" name='name' onChange={handlechange}/>
    
   </div>
   <div className="mb-3">
-    <label for="exampleInputEmail1" className="form-label">Job title : </label>
+    <label  className="form-label">Job title : </label>
     <input type="text" className="form-control" name='jobtitle' onChange={handlechange}/>
    
   </div>
 
   <div className="mb-3">
-    <label for="exampleInputEmail1" className="form-label">Email : </label>
+    <label  className="form-label">Email : </label>
     <input type="email" className="form-control" name='email'  onChange={handlechange}/> 
   </div>
   <div className="mb-3">
-    <label for="exampleInputEmail1" className="form-label">Address : </label>
-    <input type="email" className="form-control" name='address'  onChange={handlechange}/> 
+    <label  className="form-label">Address : </label>
+    <input type="text" className="form-control" name='address'  onChange={handlechange}/> 
   </div>
 
   <div className="mb-3">
-    <label for="exampleInputPassword1" className="form-label">Phone Number : </label>
+    <label htmlFor="exampleInputPassword1" className="form-label">Phone Number : </label>
     <input type="number" className="form-control" name='number' onChange={handlechange}/>
   </div>
 
   <div className="mb-3">
-    <label for="exampleInputEmail1" className="form-label">Birth Date :</label>
+    <label htmlFor="exampleInputEmail1" className="form-label">Birth Date :</label>
     <input type="date" className="form-control" name='birthdate'  onChange={handlechange}/> 
   </div>
 
   <div className="mb-3">
-    <label for="exampleInputEmail1" className="form-label">Nationality :</label>
+    <label htmlFor="exampleInputEmail1" className="form-label">Nationality :</label>
     <input type="text" className="form-control" name='nationality' onChange={handlechange}/> 
   </div>
 
   <div className="mb-3">
-    <label for="exampleInputEmail1" className="form-label">Github Link :</label>
+    <label htmlFor="exampleInputEmail1" className="form-label">Github Link :</label>
     <input type="text" className="form-control" name='githublink'  onChange={handlechange}/> 
   </div>
 

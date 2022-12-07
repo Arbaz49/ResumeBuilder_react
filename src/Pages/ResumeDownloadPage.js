@@ -1,3 +1,4 @@
+import { Button, Typography } from "@mui/material";
 import React, { useRef } from "react";
 import { useSelector } from "react-redux";
 import ReactToPrint from "react-to-print";
@@ -14,9 +15,9 @@ const ResumeDownloadPage = () => {
   const language = useSelector((state) => state.language);
   return (
     <div className="resumepage">
-      <h1 style={{ textAlign: "center" }}>PREVIEW OF RESUME</h1>
+      <Typography variant="h3" style={{ textAlign: "center" }}>PREVIEW OF RESUME</Typography>
       <ReactToPrint
-        trigger={() => <button>download</button>}
+        trigger={() => <Button variant="filled" style={{float:"right",marginRight:"50px",backgroundColor:"rgb(10 25 41)",color:"white"}}>Download / Print</Button>}
         content={() => componentRef.current}
       />
       <div style={{ width: "60%", margin: "auto" }}>
@@ -25,39 +26,32 @@ const ResumeDownloadPage = () => {
             <div className="toppart">
               <div className="resumeleft">
                 <h1 className="name">
-                  {getinfo[0].name?getinfo[0].name:<span>Name</span>}
+                  {/* {getinfo[0].name?getinfo[0].name:<span>Name</span>} */}
+                  {getinfo[0] &&<span>{getinfo[0].name}</span>}
+
                 </h1>
 
-                <h2 style={{ textAlign: "left", marginLeft: "20px" }}>
-                  {getinfo[0].jobtitle}
+                <h2 style={{ textAlign: "left"}}>
+                  {getinfo[0]&&getinfo[0].jobtitle}
                 </h2>
               </div>
               <div className="resumeright">
                 <p>
-                  {getinfo[0].address}
+                  {getinfo[0]&& getinfo[0].address}
                 </p>
-                <p>
+                <p><a href="jhbhs">
                   
-                  {getinfo[0].email ? (
+                  {getinfo[0]&& 
                     getinfo[0].email
-                  ) : (
-                    <span>test@gmail.com</span>
-                  )}
-                </p>
-                <p>
-                  {getinfo[0].githublink ? (
-                    getinfo[0].githublink
-                  ) : (
-                    <span>https://github.com/user</span>
-                  )}
-                </p>
+                  }
+                </a></p>
+                <p><a href="jbshb">
+                  {getinfo[0]&&getinfo[0].githublink}
+                </a></p>
                 <p>
                   +91{" "}
-                  {getinfo[0].number ? (
-                    getinfo[0].number
-                  ) : (
-                    <span>9900990099</span>
-                  )}
+                  {getinfo[0]&&getinfo[0].number
+                  }
                 </p>
               </div>
             </div>
@@ -65,7 +59,9 @@ const ResumeDownloadPage = () => {
               <span>
                 <b>Summary :</b>
               </span>
-              <p>{about[0].about?about[0].about:<span>about</span>}</p>
+              <p>{about[0] && <span>{about[0].about}</span>}
+
+              </p>
             </div>
             <div className="infoContainer">
               <div className="leftinfo">
@@ -111,7 +107,7 @@ const ResumeDownloadPage = () => {
                 </span>{" "}
                 <br />
                 {interest.map((ele) => {
-                  return <span>{ele.interest}</span>;
+                  return <span style={{marginLeft:"20px"}}>{ele.interest}</span>;
                 })}
               </div>
               <div className="language">
@@ -121,8 +117,8 @@ const ResumeDownloadPage = () => {
                   <b>Languages</b>
                 </span>
                 <br />
-                {language.map((ele) => {
-                  return <span>{ele.language}</span>;
+                {language.map((ele,id) => {
+                  return <span key={id} style={{marginLeft:"10px"}}>{ele.language}</span>;
                 })}
               </div>
             </div>

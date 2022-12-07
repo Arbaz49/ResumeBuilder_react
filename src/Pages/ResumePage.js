@@ -3,13 +3,13 @@ import AboutComponent from '../Components/AboutComponent';
 import Education from '../Components/Education';
 import InterestC from '../Components/InterestC';
 import Language from '../Components/Language';
-// import { Outlet } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import PersonalDetails from '../Components/PersonalDetails';
-import ProjectC from '../Components/ProjectC';
 import WorkExpC from '../Components/WorkExpC';
 import "./Resumepage.css";
 import { useNavigate } from "react-router-dom";
+// import Alert from '../Components/Alertm';
+import Alertm from '../Components/Alertm';
 
 
 const ResumePage = () => {
@@ -17,17 +17,21 @@ const ResumePage = () => {
   const handleclick=()=>{
     navigate("/resumedownload");
   }
-    const [personal,setpersonal]=useState(false);
+ const [state,setstate]=useState({
+  personal:false,
+ });
+  
+    // const [personal,setpersonal]=useState(false);
     const [about,setabout]=useState(false);
     const [education,setducation]=useState(false);
     const [work,setwork]=useState(false);
     const [interest,setinterest]=useState(false);
-    const [project,setproject]=useState(false);
+    // const [project,setproject]=useState(false);
     const [language,setlanguage]=useState(false);
 
-    const getpersonal=()=>{
-        setpersonal(!personal);
-    }
+    // const getpersonal=()=>{
+    //     setpersonal(!personal);
+    // }
     const getabout=()=>{
         setabout(!about);
     }
@@ -36,7 +40,7 @@ const ResumePage = () => {
         <Navbar/>
       <nav className="resumenavcontainer">
         <div className="btncontainer" style={{position:"sticky"}}>
-            <button className='rbuttons' onClick={getpersonal}>personal details</button>
+            <button className='rbuttons' onClick={()=>setstate({personal:true})}>personal details</button>
             <button className='rbuttons' onClick={getabout}>About</button>
             <button className='rbuttons' onClick={()=>setducation(!education)}>Education</button>
 
@@ -48,18 +52,21 @@ const ResumePage = () => {
             <button className='rbuttons' style={{backgroundColor:"red",color:"white"}} onClick={handleclick}>Preview</button>
         </div>
         <div className="inputcontainer">
-            {personal?<PersonalDetails/>:''}
+            {state.personal?<PersonalDetails/>:''}
             {about?<AboutComponent/>:''}
             {education?<Education/>:''}
             {work?<WorkExpC/>:''}
             {interest?<InterestC/>:''}
-            {project?<ProjectC/>:''}
+            {/* {project?<ProjectC/>:''} */}
             {language?<Language/>:''}
         
         </div>
-        <button className='rbuttons' style={{backgroundColor:"red",color:"white",marginLeft:"600px"}} onClick={handleclick} >Preview</button>
+     
 
       </nav>
+      <button className='rbuttons' style={{backgroundColor:"red",color:"white",marginLeft:"600px",width:"300px"}} onClick={handleclick} >Preview</button>
+      {/* <button onClick={create}>cmskm</button> */}
+      <Alertm/>
     </div>
   )
 }

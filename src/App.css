@@ -12,14 +12,20 @@
     height: 50px;
     width: 100%;
     align-items: center;
-    position: sticky;
+    position: static;
 }
 
 .rightnavcontainer >ul {
-    width: 300px;
+    width: 600px;
     display: flex;
     justify-content: space-between;
     margin-right: 50px;
+    padding-top: 10px;
+
+}
+ul{
+    display: flex;
+    align-items: center;
 
 }
 ul > li{
@@ -47,8 +53,8 @@ padding: 40px;
     font-size: 50px;
     padding: 10px;
     text-align: center;
-    margin: auto;
-    width: 20%;
+    margin-left: 500px;
+    width: 60%;
     border-radius: 12px;
     cursor: pointer;
     background-color: aqua;

@@ -18,7 +18,7 @@ const Scetion = () => {
         <img src={logo} alt="svgicon" className="svgicon" />
       </div>
     </div>
-    <div className="btncontainer">
+    <div className="btncontaine" style={{width:"500px",display:"inline-block",margin:"auto"}}>
     <button className="startbutton" onClick={handleclick}>Start</button>
 
     </div>
