@@ -8,14 +8,14 @@ A resume builder is a web application that allows users to create and customize 
 
 ## Screenshots
 
-![Home Page](https://res.cloudinary.com/duktgzyxw/image/upload/v1680081276/ProjectsImages/resumeHome_i0qirp.png)
+![Home Page](https://res.cloudinary.com/arbazcloud/image/upload/v1680081276/ProjectsImages/resumeHome_i0qirp.png)
 Home page of the website.
 
-![preview page](https://res.cloudinary.com/duktgzyxw/image/upload/v1680081509/ProjectsImages/preview_kiksmo.png)
+![preview page](https://res.cloudinary.com/arbazcloud/image/upload/v1680081509/ProjectsImages/preview_kiksmo.png)
 
 
 
-![download](https://res.cloudinary.com/duktgzyxw/image/upload/v1680081573/ProjectsImages/ResumeBuilder_cmqkwf.png)
+![download](https://res.cloudinary.com/arbazcloud/image/upload/v1680081573/ProjectsImages/ResumeBuilder_cmqkwf.png)
 
 
 
